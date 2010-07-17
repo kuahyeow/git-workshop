@@ -141,3 +141,68 @@ $ git checkout -- gamow.txt
 You have now un-done your changes.
 
 
+h2. Branching and merging
+
+Creating a branch in Git is easy. The @git branch@ command, used by itself will list the branches you currently have
+
+<pre><code>
+$ git branch
+* master
+</code></pre>
+
+The @*@ should indicate the current branch you are on, which is @master@.
+
+
+If you wish to start another branch:
+
+<pre><code>
+$ git branch exp1
+$ git branch
+  exp1
+* master
+</code></pre>
+
+The new branch is now created. Now let's work in that branch. To switch to the new branch:
+
+<pre><code>
+$ git checkout exp1
+Switched to branch 'exp1'
+</code></pre>
+
+
+@git checkout (branch)@ is used to switch branches. Let's perform some commits now,
+
+<pre><code>
+$ echo 'some content' > test.txt
+$ git add test.txt
+$ git commit -m "Added experimental txt"
+[exp1 1520634] Added experimental txt
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+ create mode 100644 test.txt
+</code></pre>
+
+Now, let's compare them to the master branch
+
+<pre><code>
+$ ls
+gamow.txt  README.textile  test.txt
+$ git checkout master
+Switched to branch 'master'
+$ ls
+gamow.txt  README.textile
+</code></pre>
+
+
+As you can see the new file you created in the other branch has dissappeared. Not to worry, they are safely tucked away, 
+and will re-appear when you switch back to that branch.
+
+
+We now try out merging. Eventually you will want to merge two branches together after the conclusion of work. 
+@git merge@ allows you to do that. To merge the @exp1@ branch into @master@
+
+<pre><code>
+$ git merge exp1
+TODO
+</code></pre>
+
+You always specify the branch you want to merge from, and you have to be in the branch you want merge into.
