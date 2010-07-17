@@ -52,7 +52,7 @@ $ git commit -m "I am adding two new files"
 On a final note, if you try @git status@ now you will see the following:
 <pre><code>
 $ git status
-# On branch master
+On branch master
 nothing to commit (working directory clean) 
 </code></pre>
 You should always aim for this state.
