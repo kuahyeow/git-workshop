@@ -104,17 +104,14 @@ h2. Basics (II)
 A very useful command is @git diff@. This is very useful to see exactly what changes you have done. 
 
 <pre><code>
-$ nano alice.txt   #EDIT the file here
+$ nano alice.txt   # EDIT the file here
 $ git diff
 diff --git a/alice.txt b/alice.txt
-index e39544b..8b89796 100644
+index e69de29..1ac99b8 100644
 --- a/alice.txt
 +++ b/alice.txt
-@@ -1,6 +1,6 @@ 
- This is my first line 
- 
+@@ -0,0 +1 @@
 +This is a new line
-+
 </code></pre>
 
 If you have changed your mind, or wish to organize your commits or staging area differently, Git allows you to do that.
