@@ -202,7 +202,11 @@ We now try out merging. Eventually you will want to merge two branches together 
 
 <pre><code>
 $ git merge exp1
-TODO
+Merge made by recursive.
+ test.txt |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+ create mode 100644 test.txt
 </code></pre>
 
 You always specify the branch you want to merge from, and you have to be in the branch you want merge into.
+
