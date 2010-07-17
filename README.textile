@@ -281,3 +281,7 @@ You have learnt :
 # Undoing changes
 # Branching and merging
 # Fixing conflicts
+
+This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License
+http://creativecommons.org/licenses/by-nc-sa/3.0/
+Author: Thong Kuah
