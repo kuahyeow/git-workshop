@@ -1,19 +1,19 @@
 First, clone this repository:
 
-<pre></code>
+<pre><code>
 $ git clone git://github.com/kuahyeow/git-workshop.git
 TODO
 $ cd git-workshop
 $ ls
-</code</pre>
+</code></pre>
 
 Once you have cloned your repository, you should see your projects files.
 
 You should also see the @.git@ subdirectory. This is where all your repository's data and history is kept
-<pre></code>
+<pre><code>
 $ ls -a .git
 branches  config  description  HEAD  hooks  info  objects  refs
-</code</pre>
+</code></pre>
 
 h1. Basics
 
@@ -24,36 +24,36 @@ In Git, you have to add content to the 'staging area' first by using @git add@
 and then finalizing the process to record it into the git index by using @git commit@
 
 We use @git status@ to determine the status of any changes, whether they are untracked, in the staging area, or committed.
-<pre></code>
+<pre><code>
 $ git status -s
 ?? alice.txt
 ?? bob.txt
-</code</pre>
+</code></pre>
 
 Now to add the files to the staging area
-<pre></code>
+<pre><code>
 $ git add alice.txt bob.txt
-</code</pre>
+</code></pre>
 
 Try running @git status -s@ again to see what's changed.
-<pre></code>
+<pre><code>
 $ git status -s
 A  alice.txt
 A  bob.txt
-</code</pre>
+</code></pre>
 
 You are now ready to commit. The @-m@ flag allows you to enter a message to go with the commit at the same time. 
-<pre></code>
+<pre><code>
 $ git commit -m "I am adding two new files"
 [master 4e7c6cf] I am adding two new files
  2 files changed, 2 insertions(+), 0 deletions(-)
-</code</pre>
+</code></pre>
 
 On a final note, if you try @git status@ now you will see the following:
-<pre></code>
+<pre><code>
 $ git status
 # On branch master
 nothing to commit (working directory clean) 
-</code</pre>
+</code></pre>
 You should always aim for this state.
 
