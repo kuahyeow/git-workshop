@@ -282,6 +282,12 @@ You have learnt :
 # Branching and merging
 # Fixing conflicts
 
+h3. References and Further reading
+I throughly recommend these resources to continue your Git practice:
+
+* http://progit.org (buy the book at http://tinyurl.com/amazonprogit)
+* http://gitref.org
+
 This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License
 http://creativecommons.org/licenses/by-nc-sa/3.0/
 Author: Thong Kuah
