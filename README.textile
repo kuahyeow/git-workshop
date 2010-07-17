@@ -2,7 +2,12 @@ First, clone this repository:
 
 <pre><code>
 $ git clone git://github.com/kuahyeow/git-workshop.git
-TODO
+Initialized empty Git repository in /home/kuahyeow/git-workshop/.git/
+remote: Counting objects: 17, done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 17 (delta 4), reused 0 (delta 0)
+Receiving objects: 100% (17/17), done.
+Resolving deltas: 100% (4/4), done.
 $ cd git-workshop
 $ ls
 </code></pre>
