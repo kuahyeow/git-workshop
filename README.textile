@@ -46,4 +46,15 @@ A  bob.txt
 You are now ready to commit. The @-m@ flag allows you to enter a message to go with the commit at the same time. 
 <pre>
 $ git commit -m "I am adding two new files"
+[master 4e7c6cf] I am adding two new files
+ 2 files changed, 2 insertions(+), 0 deletions(-)
 </pre>
+
+On a final note, if you try @git status@ now you will see the following:
+<pre>
+$ git status
+# On branch master
+nothing to commit (working directory clean) 
+</pre>
+You should always aim for this state.
+
