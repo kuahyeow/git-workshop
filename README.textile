@@ -1,3 +1,20 @@
+h1. Setup
+
+Some house-cleaning here. We assume of course you have Git installed, (hopefully >= 1.6.0).
+
+First thing to do is to setup your identity. This identifies you to other people who download the project.
+
+<pre><code>
+$ git config --global user.name "Your Name"
+$ git config --global user.email your.email@example.com
+</code></pre>
+
+As a helpful step, you may want to set Git to use your favourite editor
+<pre><code>
+$ git config --global core.editor emacs
+</code></pre>
+
+h1. Start
 First, clone this repository:
 
 <pre><code>
@@ -61,4 +78,41 @@ On branch master
 nothing to commit (working directory clean) 
 </code></pre>
 You should always aim for this state.
+
+h2. Basics (II)
+
+If you have changed your mind, or wish to organize your commits or staging area differently, Git allows you to do that.
+
+Say, you edited @gamow.txt@ and added it to the staging area, and then do not wish to proceed. Here's how to undo adding files to the staging area.
+<pre><code>
+$ git status -s
+ M gamow.txt 
+$ git add gamow.txt
+$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   gamow.txt
+#
+$ git reset HEAD gamow.txt
+Unstaged changes after reset:
+M	gamow.txt
+</code></pre>
+
+Say, you now realise you do not want your changes now at all, and wish to revert back to the file back before when you started editing it.
+This happens a lot especially when dealing with complicated code. Fortunately, the command to check for status actually tells you how to do it.
+<pre><code>
+$ git status
+# On branch master
+# Changed but not updated:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   gamow.txt
+#
+$ git checkout -- gamow.txt
+</code></pre>
+
+You have now un-done your changes.
 
