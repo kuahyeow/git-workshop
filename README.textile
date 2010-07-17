@@ -49,11 +49,11 @@ branches  config  description  HEAD  hooks  info  objects  refs
 
 h2. Basics
 
-Now, let's try to adding some files into the project. Create a couple of files. For example, I
+Now, let's try adding some files into the project. Create a couple of files. For example, I
 create two files named @bob.txt@ and @alice.txt@.
 
-In Git, you have to add content to the 'staging area' first by using @git add@
-and then finalizing the process to record it into the git index by using @git commit@
+In Git, you add content to the 'staging area' first by using @git add@ and then 
+finalizing the process to record it into the git index by using @git commit@
 
 We use @git status@ to determine the status of any changes, whether they are untracked, in the staging area, or committed.
 
@@ -63,6 +63,7 @@ $ git status -s
 ?? bob.txt
 </code></pre>
 
+The @??@ means that the files are not indexed by Git yet, or 'untracked'.
 
 Now to add the files to the staging area
 
@@ -79,6 +80,7 @@ A  alice.txt
 A  bob.txt
 </code></pre>
 
+The @A@ signifies that the files are now Added to the staging area.
 
 You are now ready to commit. The @-m@ flag allows you to enter a message to go with the commit at the same time. 
 
@@ -166,7 +168,7 @@ $ git branch
 The @*@ should indicate the current branch you are on, which is @master@.
 
 
-If you wish to start another branch:
+If you wish to start another branch, use @git branch (new-branch)@ :
 
 <pre><code>
 $ git branch exp1
@@ -226,7 +228,8 @@ You always specify the branch you want to merge from, and you have to be in the 
 At this point, you can also try out @gitk@ to visualize the changes and various branches
 
 Git is pretty good at merging automagically, even when the same file is edited. There are however, 
-some situations where the same line of code is edited there is no way a computer can figure out how to merge.
+some situations where the same line of code is edited there is no way a computer can figure out how to merge. 
+This will trigger a conflict which you will have to fix. 
 
 h2. Merge Conflicts
 
@@ -265,7 +268,9 @@ $ git commit -m "Fixed conflict"
 [master f03b09c] Fixed conflict
 </code></pre>
 
-Congratulations. You have fixed the conflict. 
+Congratulations. You have fixed the conflict. All is good in the world.
+
+h2. Fin
 
 You have learnt :
 
