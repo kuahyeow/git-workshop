@@ -8,7 +8,7 @@ First thing to do is to setup your identity. This identifies you to other people
 <pre><code>
 $ git config --global user.name "Your Name"
 $ git config --global user.email your.email@example.com
-</code><pre>
+</code></pre>
 
 
 As a helpful step, you may want to set Git to use your favourite editor
@@ -16,7 +16,7 @@ As a helpful step, you may want to set Git to use your favourite editor
 
 <pre><code>
 $ git config --global core.editor emacs
-</code><pre>
+</code></pre>
 
 
 h1. Start
@@ -33,7 +33,7 @@ Receiving objects: 100% (17/17), done.
 Resolving deltas: 100% (4/4), done.
 $ cd git-workshop
 $ ls
-</code><pre>
+</code></pre>
 
 
 Once you have cloned your repository, you should see your projects files.
@@ -43,7 +43,7 @@ You should also see the @.git@ subdirectory. This is where all your repository's
 <pre><code>
 $ ls -a .git
 branches  config  description  HEAD  hooks  info  objects  refs
-</code><pre>
+</code></pre>
 
 
 h1. Basics
@@ -60,14 +60,14 @@ We use @git status@ to determine the status of any changes, whether they are unt
 $ git status -s
 ?? alice.txt
 ?? bob.txt
-</code><pre>
+</code></pre>
 
 
 Now to add the files to the staging area
 
 <pre><code>
 $ git add alice.txt bob.txt
-</code><pre>
+</code></pre>
 
 
 Try running @git status -s@ again to see what's changed.
@@ -76,7 +76,7 @@ Try running @git status -s@ again to see what's changed.
 $ git status -s
 A  alice.txt
 A  bob.txt
-</code><pre>
+</code></pre>
 
 
 You are now ready to commit. The @-m@ flag allows you to enter a message to go with the commit at the same time. 
@@ -85,7 +85,7 @@ You are now ready to commit. The @-m@ flag allows you to enter a message to go w
 $ git commit -m "I am adding two new files"
 [master 4e7c6cf] I am adding two new files
  2 files changed, 2 insertions(+), 0 deletions(-)
-</code><pre>
+</code></pre>
 
 
 On a final note, if you try @git status@ now you will see the following:
@@ -94,7 +94,7 @@ On a final note, if you try @git status@ now you will see the following:
 $ git status
 On branch master
 nothing to commit (working directory clean) 
-</code><pre>
+</code></pre>
 
 You should always aim for this state.
 
@@ -118,7 +118,7 @@ $ git status
 $ git reset HEAD gamow.txt
 Unstaged changes after reset:
 M	gamow.txt
-</code><pre>
+</code></pre>
 
 
 Say, you now realise you do not want your changes now at all, and wish to revert back to the file back before when you started editing it.
@@ -134,7 +134,7 @@ $ git status
 #	modified:   gamow.txt
 #
 $ git checkout -- gamow.txt
-</code><pre>
+</code></pre>
 
 
 You have now un-done your changes.
