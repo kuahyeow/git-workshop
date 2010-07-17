@@ -210,3 +210,12 @@ Merge made by recursive.
 
 You always specify the branch you want to merge from, and you have to be in the branch you want merge into.
 
+At this point, you can also try out @gitk@ to visualize the changes and various branches
+
+Git is pretty good at merging automagically, even when the same file is edited. There are however, 
+some situations where the line of code is edited there is no way a computer can figure out how to merge.
+
+h2. Merge Conflicts
+
+
+
