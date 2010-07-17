@@ -6,7 +6,7 @@ Gamow humorously decided to add the name of his friend—the eminent physicist H
 Alpher, at the time only a graduate student, was generally dismayed by the inclusion of Bethe's name on this paper. He felt that the inclusion of another eminent physicist would overshadow his personal contribution to this work and prevent him from receiving proper recognition for such an important discovery. He expressed resentment over Gamow's decision as late as 1999.[
 
 The theory originally proposed that all atomic nuclei are produced by the successive capture of neutrons, one mass unit at a time. However, later study challenged the universality of the successive capture theory. No element was found to have a stable isotope with an atomic mass of five or eight. Physicists soon noticed that these mass gaps would hinder the production of elements beyond helium. Just as it's impossible to climb a staircase one step at a time when one of the steps is missing, this discovery meant that the successive capture theory could not account for higher elements.
-It was eventually recognized that most of the heavy elements observed in the present universe are the result of stellar nucleosynthesis in stars, a theory largely developed by Bethe.
+It was eventually recognized that most of the heavy elements observed in the present universe are the result of stellar nucleosynthesis (http://en.wikipedia.org/wiki/Stellar_nucleosynthesis) in stars, a theory largely developed by Bethe.
 
 Text is available under the Creative Commons Attribution-ShareAlike License; additional terms may apply. See Terms of Use for details.
 http://creativecommons.org/licenses/by-sa/3.0/
