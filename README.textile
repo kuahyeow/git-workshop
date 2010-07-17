@@ -101,24 +101,40 @@ You should always aim for this state.
 
 h2. Basics (II)
 
+A very useful command is @git diff@. This is very useful to see exactly what changes you have done. 
+
+<pre><code>
+$ nano alice.txt   #EDIT the file here
+$ git diff
+diff --git a/alice.txt b/alice.txt
+index e39544b..8b89796 100644
+--- a/alice.txt
++++ b/alice.txt
+@@ -1,6 +1,6 @@ 
+ This is my first line 
+ 
++This is a new line
++
+</code></pre>
+
 If you have changed your mind, or wish to organize your commits or staging area differently, Git allows you to do that.
 
-Say, you edited @gamow.txt@ and added it to the staging area, and then do not wish to proceed. Here's how to undo adding files to the staging area.
+Say, you edited @alice.txt@ and added it to the staging area, and then do not wish to proceed. Here's how to undo adding files to the staging area.
 
 <pre><code>
 $ git status -s
- M gamow.txt 
-$ git add gamow.txt
+ M alice.txt 
+$ git add alice.txt
 $ git status
 # On branch master
 # Changes to be committed:
 #   (use "git reset HEAD <file>..." to unstage)
 #
-#	modified:   gamow.txt
+#	modified:   alice.txt
 #
-$ git reset HEAD gamow.txt
+$ git reset HEAD alice.txt
 Unstaged changes after reset:
-M	gamow.txt
+M	alice.txt
 </code></pre>
 
 
@@ -132,9 +148,9 @@ $ git status
 #   (use "git add <file>..." to update what will be committed)
 #   (use "git checkout -- <file>..." to discard changes in working directory)
 #
-#	modified:   gamow.txt
+#	modified:   alice.txt
 #
-$ git checkout -- gamow.txt
+$ git checkout -- alice.txt
 </code></pre>
 
 
@@ -217,5 +233,49 @@ some situations where the same line of code is edited there is no way a computer
 
 h2. Merge Conflicts
 
+We now practise fixing merge conflicts. Recall that conflicts are caused by merges which affect the same block of code.
 
+Here's a branch I prepared earlier. Run the code below to set it up (don't worry if you can't understand it)
+<pre><code>
+$ git branch --track alpher origin/alpher
+Branch alpher set up to track remote branch alpher from origin.
+</code></pre>
 
+You should now have a new branch called alpher. Try merging that branch now and fix the ensuing conflict.
+
+<pre><code>
+$ git branch
+  alpher
+  exp1
+* master
+$ git merge alpher 
+Auto-merging gamow.txt
+CONFLICT (content): Merge conflict in gamow.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+$ cat gamow.txt
+<<<<<<< HEAD
+It was eventually recognized that most of the heavy elements observed in the present universe are the result of stellar nucleosynthesis (http://en.wikipedia.org/wiki/Stellar_nucleosynthesis) in stars, a theory largely developed by Bethe.
+=======
+
+http://en.wikipedia.org/wiki/Stellar_nucleosynthesis
+Stellar nucleosynthesis is the collective term for the nuclear reactions taking place in stars to build the nuclei of the elements heavier than hydrogen. Some small quantity of these reactions also occur on the stellar surface under various circumstances. For the creation of elements during the explosion of a star, the term supernova nucleosynthesis is used.
+>>>>>>> alpher
+$ nano gamow.txt   # YOU FIX the conflict here. 
+
+$ git add gamow.txt
+$ git commit -m "Fixed conflict"
+[master f03b09c] Fixed conflict
+</code></pre>
+
+Congratulations. You have fixed the conflict. 
+
+You have learnt :
+
+# Clone a repository
+# Commit files
+# Check status
+# Check diff
+# Undoing changes
+# Branching and merging
+# Fixing conflicts
