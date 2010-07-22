@@ -268,7 +268,7 @@ Stellar nucleosynthesis is the collective term for the nuclear reactions taking 
 Git uses pretty much standard conflict resolution markers. The top part of the block, which is everything between @<<<<<< HEAD@ and @======@ is what was in your current branch.
 The bottom half is the version that is present from the @alpher@ branch. To resolve the conflict, you either choose one side or merge them as you see fit.
 
-For example, I decide to choose the version from the @alpher@ branch.
+For example, I decide to choose the version from the @alpher@ branch. Once I have done that, I can then mark the conflict as fixed by using @git add@ and @git commit@.
 
 <pre><code>
 $ nano gamow.txt   # YOU FIX the conflict here. 
