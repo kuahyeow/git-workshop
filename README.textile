@@ -286,13 +286,13 @@ h3. References and Further reading
 
 I throughly recommend these resources to continue your Git practice:
 
-* http://progit.org (buy the book at http://tinyurl.com/amazonprogit)
-* http://gitref.org
+* <a href="http://progit.org">http://progit.org</a> (buy the book at http://tinyurl.com/amazonprogit)
+* <a href="http://gitref.org">http://gitref.org</a>
 
 
 
 h2. Author
 
 This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License
-http://creativecommons.org/licenses/by-nc-sa/3.0/
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">http://creativecommons.org/licenses/by-nc-sa/3.0/</a>
 Author: Thong Kuah
