@@ -87,7 +87,9 @@ You are now ready to commit. The @-m@ flag allows you to enter a message to go w
 <pre><code>
 $ git commit -m "I am adding two new files"
 [master 4e7c6cf] I am adding two new files
- 2 files changed, 2 insertions(+), 0 deletions(-)
+ 0 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 alice.txt
+ create mode 100644 bob.txt
 </code></pre>
 
 
@@ -261,8 +263,15 @@ It was eventually recognized that most of the heavy elements observed in the pre
 http://en.wikipedia.org/wiki/Stellar_nucleosynthesis
 Stellar nucleosynthesis is the collective term for the nuclear reactions taking place in stars to build the nuclei of the elements heavier than hydrogen. Some small quantity of these reactions also occur on the stellar surface under various circumstances. For the creation of elements during the explosion of a star, the term supernova nucleosynthesis is used.
 >>>>>>> alpher
-$ nano gamow.txt   # YOU FIX the conflict here. 
+</code></pre>
 
+Git uses pretty much standard conflict resolution markers. The top part of the block, which is everything between @<<<<<< HEAD@ and @======@ is what was in your current branch.
+The bottom half is the version that is present from the @alpher@ branch. To resolve the conflict, you either choose one side or merge them as you see fit.
+
+For example, I decide to choose the version from the @alpher@ branch.
+
+<pre><code>
+$ nano gamow.txt   # YOU FIX the conflict here. 
 $ git add gamow.txt
 $ git commit -m "Fixed conflict"
 [master f03b09c] Fixed conflict
