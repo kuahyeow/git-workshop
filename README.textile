@@ -297,6 +297,7 @@ I throughly recommend these resources to continue your Git practice:
 
 * <a href="http://progit.org">http://progit.org</a> (buy the book at http://tinyurl.com/amazonprogit)
 * <a href="http://gitref.org">http://gitref.org</a>
+* http://www.kernel.org/pub/software/scm/git/docs/everyday.html
 
 
 
