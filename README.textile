@@ -51,8 +51,7 @@ branches  config  description  HEAD  hooks  info  objects  refs
 
 h2. Adding new files
 
-Now, let's try adding some files into the project. Create a couple of files. For example, I
-create two files named @bob.txt@ and @alice.txt@.
+Now, let's try adding some files into the project. Create a couple of files. For example, I create two files named @bob.txt@ and @alice.txt@.
 
 <pre>
 
