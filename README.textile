@@ -141,7 +141,7 @@ index e69de29..2aedcab 100644
 </code></pre>
 
 
-Now let's add our updated file to the staging area
+Now let's add our modified file to the staging area
 
 <pre>
 
@@ -166,25 +166,23 @@ M	alice.txt
 
 </code></pre>
 
+Your staging area should now be empty. What's happened to the Lorem Ipsum changes? It's still there. We are now back to the state just before we added this file to staging area.
+
+<pre>
+
+What do we call this state?
+
+</pre>
+
+To undo your changes entirely, we use @git checkout@, like so:
+
+<pre><code>
+
+$ git checkout alice.txt
+
+</code></pre>
+
 You have now un-done your changes.
-
-
-And then commit our file to the repository
-
-<pre>
-
-Commit your changes with the message "Added Lorem Ipsum to alice.txt as requested" (Ask for help if needed)
-
-</pre>
-
-Did you manage to commit your changes? Try using @git log@ or @git show@ to verify that your last commit was "Added Lorem Ipsum to alice.txt as requested".
-
-<pre>
-
-Verify that your last commit in the git log
-
-</pre>
-
 
 
 
