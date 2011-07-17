@@ -274,7 +274,17 @@ Switch back to the exp1 branch, and check that the test.txt is now present.
 h2. Merging
 
 We now try out merging. Eventually you will want to merge two branches together after the conclusion of work. 
-@git merge@ allows you to do that. To merge the @exp1@ branch into @master@
+@git merge@ allows you to do that. 
+
+First, make sure you are on the @master@ branch.
+
+<pre>
+
+Switch to the master branch if you haven't already
+
+</pre>
+
+To merge the @exp1@ branch into @master@
 
 <pre><code>
 $ git merge exp1
@@ -286,7 +296,7 @@ Merge made by recursive.
 
 You always specify the branch you want to merge from, and you have to be in the branch you want merge into.
 
-At this point, you can also try out @gitk@ to visualize the changes and various branches
+At this point, you can also try out @gitk@ to visualize the changes and how the two branches have merged
 
 Git is pretty good at merging automagically, even when the same file is edited. There are however, 
 some situations where the same line of code is edited there is no way a computer can figure out how to merge. 
@@ -296,23 +306,36 @@ h2. Merge Conflicts
 
 We now practise fixing merge conflicts. Recall that conflicts are caused by merges which affect the same block of code.
 
-Here's a branch I prepared earlier. Run the code below to set it up (don't worry if you can't understand it)
+Here's a branch I prepared earlier. The branch is called @alpher@. Run the code below to set it up (don't worry if you can't understand it)
 <pre><code>
-$ git branch --track alpher origin/alpher
+$ git checkout alpher
+
 Branch alpher set up to track remote branch alpher from origin.
+Switched to a new branch 'alpher'
 </code></pre>
 
-You should now have a new branch called alpher. Try merging that branch now and fix the ensuing conflict.
+You should now have a new branch called alpher. Try merging that branch into master now and fix the ensuing conflict.
+
+<pre>
+
+Merge the @alper@ branch into @master (as you did when you merged exp1 into master) (Ask for help if stumped)
+
+</pre>
+
+
+You should see a @conflict@ with the gamow.txt file. This means that the same line of text was edited and committed on both the master branch and the alpher branch. The output below basically tells you the current situation
 
 <pre><code>
-$ git branch
-  alpher
-  exp1
-* master
-$ git merge alpher 
+ 
 Auto-merging gamow.txt
 CONFLICT (content): Merge conflict in gamow.txt
 Automatic merge failed; fix conflicts and then commit the result.
+
+</code></pre>
+
+If you open the @gamow.txt@ file, you will see something similar as below: 
+
+<pre>
 
 $ cat gamow.txt
 <<<<<<< HEAD
@@ -322,15 +345,22 @@ It was eventually recognized that most of the heavy elements observed in the pre
 http://en.wikipedia.org/wiki/Stellar_nucleosynthesis
 Stellar nucleosynthesis is the collective term for the nuclear reactions taking place in stars to build the nuclei of the elements heavier than hydrogen. Some small quantity of these reactions also occur on the stellar surface under various circumstances. For the creation of elements during the explosion of a star, the term supernova nucleosynthesis is used.
 >>>>>>> alpher
-</code></pre>
+</pre>
 
 Git uses pretty much standard conflict resolution markers. The top part of the block, which is everything between @<<<<<< HEAD@ and @======@ is what was in your current branch.
 The bottom half is the version that is present from the @alpher@ branch. To resolve the conflict, you either choose one side or merge them as you see fit.
 
-For example, I decide to choose the version from the @alpher@ branch. Once I have done that, I can then mark the conflict as fixed by using @git add@ and @git commit@.
+For example, I might decide to choose the version from the @alpher@ branch. 
+
+<pre>
+
+Fix the merge conflict. Pick the text that you think is better (Ask for help if stumped)
+
+</pre>
+
+Once I have done that, I can then mark the conflict as fixed by using @git add@ and @git commit@. 
 
 <pre><code>
-$ nano gamow.txt   # YOU FIX the conflict here. 
 $ git add gamow.txt
 $ git commit -m "Fixed conflict"
 [master f03b09c] Fixed conflict
