@@ -322,7 +322,7 @@ You should now have a new branch called alpher. Try merging that branch into mas
 
 <pre>
 
-Merge the @alper@ branch into @master (as you did when you merged exp1 into master) (Ask for help if stumped)
+Merge the alpher branch into master (as you did when you merged exp1 into master) (Ask for help if stumped)
 
 </pre>
 
