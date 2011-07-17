@@ -157,7 +157,9 @@ Now, check the <b>status</b> of <b>alice.txt</b>. Is it in the staging area now?
 </pre>
 
 
-Let's say we did not like putting Lorem ipsum into @alice.txt@. One advantage of a staging area is to enable us to back out before we commit - which is a bit harder to back out of. Here's how to back out of the staging area :
+Let's say we did not like putting Lorem ipsum into @alice.txt@. One advantage of a staging area is to enable us to back out before we commit - which is a bit harder to back out of. Remembering the mail analogy - it's easier to take mail out of the cardboard box before you seal it than after.
+
+Here's how to back out of the staging area :
 
 <pre><code>
 $ git reset HEAD alice.txt
