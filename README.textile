@@ -182,22 +182,21 @@ $ git checkout alice.txt
 
 </code></pre>
 
-You have now un-done your changes.
+You have now un-done your changes. Your file is now empty
 
 
 
-
-h2. Branching and merging
+h2. Branching
 
 Creating a branch in Git is easy. The @git branch@ command, used by itself will list the branches you currently have
 
 <pre><code>
 $ git branch
+
 * master
 </code></pre>
 
 The @*@ should indicate the current branch you are on, which is @master@.
-
 
 If you wish to start another branch, use @git branch (new-branch)@ :
 
@@ -212,11 +211,14 @@ The new branch is now created. Now let's work in that branch. To switch to the n
 
 <pre><code>
 $ git checkout exp1
+
 Switched to branch 'exp1'
 </code></pre>
 
+@git checkout (branch)@ is used to switch branches. 
 
-@git checkout (branch)@ is used to switch branches. Let's perform some commits now,
+
+Let's perform some commits now,
 
 <pre><code>
 $ echo 'some content' > test.txt
@@ -227,21 +229,49 @@ $ git commit -m "Added experimental txt"
  create mode 100644 test.txt
 </code></pre>
 
-Now, let's compare them to the master branch
+Now, let's compare them to the master branch. Use @git diff@
+
+<pre><code>
+$ git diff master
+
+diff --git a/test.txt b/test.txt
+new file mode 100644
+index 0000000..2ef267e
+--- /dev/null
++++ b/test.txt
+@@ -0,0 +1 @@
++some content
+</pre></code>
+
+Basically what the above output says is that test.txt is present on the @exp1@ branch, but is absent on the @master@ branch.
+
+
+Git is good enough to handle your files when you switch between branches. Switch back to the @master@ branch
+
+<pre>
+
+Switch back to the master branch (Hint: It's the same command we used to switch the the exp1 branch above)
+
+</pre>
+
+Now, where's our @test.txt@ file ?
 
 <pre><code>
 $ ls
-gamow.txt  README.textile  test.txt
-$ git checkout master
-Switched to branch 'master'
-$ ls
-gamow.txt  README.textile
+README.textile	alice.txt	bob.txt		gamow.txt
 </code></pre>
 
-
-As you can see the new file you created in the other branch has dissappeared. Not to worry, they are safely tucked away, 
+As you can see the new file you created in the other branch has disappeared. Not to worry, they are safely tucked away, 
 and will re-appear when you switch back to that branch.
 
+<pre>
+
+Switch back to the exp1 branch, and check that the test.txt is now present.
+
+</pre>
+
+
+h2. Merging
 
 We now try out merging. Eventually you will want to merge two branches together after the conclusion of work. 
 @git merge@ allows you to do that. To merge the @exp1@ branch into @master@
