@@ -191,7 +191,7 @@ You have now un-done your changes. Your file is now empty
 
 h2. Branching
 
-Creating a branch in Git is easy. The @git branch@ command, used by itself will list the branches you currently have
+Creating a branch in Git is easy. The @git branch@ command, when used by itself, will list the branches you currently have
 
 <pre><code>
 $ git branch
