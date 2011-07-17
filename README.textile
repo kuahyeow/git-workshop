@@ -248,7 +248,7 @@ index 0000000..2ef267e
 +some content
 </pre></code>
 
-Basically what the above output says is that test.txt is present on the @exp1@ branch, but is absent on the @master@ branch.
+Basically what the above output says is that @test.txt@ is present on the @exp1@ branch, but is absent on the @master@ branch.
 
 
 Git is good enough to handle your files when you switch between branches. Switch back to the @master@ branch
