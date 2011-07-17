@@ -54,8 +54,11 @@ h2. Basics
 Now, let's try adding some files into the project. Create a couple of files. For example, I
 create two files named @bob.txt@ and @alice.txt@.
 
-In Git, you add content to the 'staging area' first by using @git add@ and then 
-finalizing the process to record it into the git index by using @git commit@
+<pre>
+
+In your working directory, create two files named alice.txt and bob.txt
+
+</pre>
 
 We use @git status@ to determine the status of any changes, whether they are untracked, in the staging area, or committed.
 
@@ -65,6 +68,9 @@ $ git status -s
 ?? bob.txt
 </code></pre>
 
+In Git, you add content to the 'staging area' first by using @git add@ and then 
+finalizing the process to record it into the git index by using @git commit@
+
 The @??@ means that the files are not indexed by Git yet, or 'untracked'.
 
 Now to add the files to the staging area
@@ -72,7 +78,6 @@ Now to add the files to the staging area
 <pre><code>
 $ git add alice.txt bob.txt
 </code></pre>
-
 
 Try running @git status -s@ again to see what's changed.
 
