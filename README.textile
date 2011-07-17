@@ -191,6 +191,8 @@ You have now un-done your changes. Your file is now empty
 
 h2. Branching
 
+Most large code bases have at least two branches - a 'live' branch and a 'development' branch. The live branch is code which is OK to be deployed on to a website, or downloaded by customers. The development branch allows developers to work on features which might not be bug free. Only once everyone is happy with the development branch would it be merged with the live branch.
+
 Creating a branch in Git is easy. The @git branch@ command, when used by itself, will list the branches you currently have
 
 <pre><code>
