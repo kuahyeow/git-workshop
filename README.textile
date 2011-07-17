@@ -1,6 +1,6 @@
 h2. Setup
 
-Some house-cleaning here. We assume of course you have Git installed, (hopefully >= 1.6.0).
+Some house-cleaning here. We assume of course you have Git installed, (hopefully >= 1.7.0).
 
 First thing to do is to setup your identity. This identifies you to other people who download the project.
 
@@ -25,7 +25,7 @@ h2. Start
 First, clone this repository:
 
 <pre><code>
-$ git clone git://github.com/kuahyeow/git-workshop.git
+$ git clone https://github.com/kuahyeow/git-workshop.git
 Initialized empty Git repository in /home/kuahyeow/git-workshop/.git/
 remote: Counting objects: 17, done.
 remote: Compressing objects: 100% (11/11), done.
