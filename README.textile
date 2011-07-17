@@ -301,8 +301,7 @@ You always specify the branch you want to merge from, and you have to be in the 
 
 At this point, you can also try out @gitk@ to visualize the changes and how the two branches have merged
 
-Git is pretty good at merging automagically, even when the same file is edited. There are however, 
-some situations where the same line of code is edited there is no way a computer can figure out how to merge. 
+Git is pretty good at merging automagically, even when the same file is edited. There are however, some situations where the same line of code is edited there is no way a computer can figure out how to merge. 
 This will trigger a conflict which you will have to fix. 
 
 h2. Merge Conflicts
@@ -317,7 +316,7 @@ Branch alpher set up to track remote branch alpher from origin.
 Switched to a new branch 'alpher'
 </code></pre>
 
-You should now have a new branch called alpher. Try merging that branch into master now and fix the ensuing conflict.
+You should now have a new branch called @alpher@. Try merging that branch into @master@ now and fix the ensuing conflict.
 
 <pre>
 
@@ -326,7 +325,7 @@ Merge the alpher branch into master (as you did when you merged exp1 into master
 </pre>
 
 
-You should see a @conflict@ with the gamow.txt file. This means that the same line of text was edited and committed on both the master branch and the alpher branch. The output below basically tells you the current situation
+You should see a @conflict@ with the @gamow.txt@ file. This means that the same line of text was edited and committed on both the master branch and the alpher branch. The output below basically tells you the current situation
 
 <pre><code>
  
