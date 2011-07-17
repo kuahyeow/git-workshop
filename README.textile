@@ -60,10 +60,11 @@ In your working directory, create two files named alice.txt and bob.txt
 
 </pre>
 
-In Git, you add content to the @staging area@ first by using @git add@ and then 
-finalizing the process to record it into the git index by using @git commit@
+Let's use a mail analogy. 
 
-Now to add the files to the staging area
+In Git, you first add content to the @staging area@ by using @git add@. This is like putting the stuff you want to send into a cardboard box. You finalize the process and record it into the git index by using @git commit@. This is like sealing the box - it's now ready to send.
+
+Let's add the files to the staging area
 
 <pre><code>
 $ git add alice.txt bob.txt
