@@ -153,12 +153,17 @@ Add @alice.txt@ to the staging area. (Ask for help if you are stumped)
 
 Now, check the @status@ of @alice.txt@. Is it in the staging area now?
 
-<pre>
+</pre>
 
 
 Let's say we did not like putting Lorem ipsum into @alice.txt@. One advantage of a staging area is to enable us to back out before we commit - which is a bit harder to back out of. Here's how to back out of the staging area :
 
 <pre><code>
+$ git reset HEAD alice.txt
+
+Unstaged changes after reset:
+M	alice.txt
+
 </code></pre>
 
 You have now un-done your changes.
