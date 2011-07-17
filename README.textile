@@ -146,13 +146,13 @@ Now let's add our modified file to the staging area
 
 <pre>
 
-Add @alice.txt@ to the staging area. (Ask for help if you are stumped)
+Add <b>alice.txt</b> to the staging area. (Ask for help if you are stumped)
 
 </pre> 
 
 <pre>
 
-Now, check the @status@ of @alice.txt@. Is it in the staging area now?
+Now, check the <b>status</b> of <b>alice.txt</b>. Is it in the staging area now?
 
 </pre>
 
