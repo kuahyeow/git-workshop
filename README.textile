@@ -60,7 +60,7 @@ In your working directory, create two files named alice.txt and bob.txt
 
 </pre>
 
-In Git, you add content to the 'staging area' first by using @git add@ and then 
+In Git, you add content to the @staging area@ first by using @git add@ and then 
 finalizing the process to record it into the git index by using @git commit@
 
 Now to add the files to the staging area
@@ -109,61 +109,79 @@ index 0000000..e69de29
 </code></pre>
 
 
-h2. Adding more files and changes
+h2. Adding more changes and backing out
 
+In this section, we are going to add more changes, and try to recover from mistakes.
 
+Be forewarned, this next step is going to be hard. We will need to add some content to alice.txt. 
 
-A very useful command is @git diff@. This is very useful to see exactly what changes you have done. 
+<pre>
+Open alice.txt and type in something, anything. 
+
+e.g. Lorem ipsum Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium
+
+Then save.
+
+</pre>
+
+So we have updated @alice.txt@ and we wish to commit it to our @repository@.
+
+What did we change? A very useful command is @git diff@. This is very useful to see exactly what changes you have done. 
 
 <pre><code>
-$ nano alice.txt   # EDIT the file here
 $ git diff
+
 diff --git a/alice.txt b/alice.txt
-index e69de29..1ac99b8 100644
+index e69de29..2aedcab 100644
 --- a/alice.txt
 +++ b/alice.txt
 @@ -0,0 +1 @@
-+This is a new line
++Lorem ipsum Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium
+
 </code></pre>
 
-If you have changed your mind, or wish to organize your commits or staging area differently, Git allows you to do that.
 
-Say, you edited @alice.txt@ and added it to the staging area, and then do not wish to proceed. Here's how to undo adding files to the staging area.
+Now let's add our updated file to the staging area
+
+<pre>
+
+Add @alice.txt@ to the staging area. (Ask for help if you are stumped)
+
+</pre> 
+
+<pre>
+
+Now, check the @status@ of @alice.txt@. Is it in the staging area now?
+
+<pre>
+
+
+Let's say we did not like putting Lorem ipsum into @alice.txt@. One advantage of a staging area is to enable us to back out before we commit - which is a bit harder to back out of. Here's how to back out of the staging area :
 
 <pre><code>
-$ git status -s
- M alice.txt 
-$ git add alice.txt
-$ git status
-# On branch master
-# Changes to be committed:
-#   (use "git reset HEAD <file>..." to unstage)
-#
-#	modified:   alice.txt
-#
-$ git reset HEAD alice.txt
-Unstaged changes after reset:
-M	alice.txt
 </code></pre>
-
-
-Say, you now realise you do not want your changes now at all, and wish to revert back to the file back before when you started editing it.
-This happens a lot especially when dealing with complicated code. Fortunately, the command to check for status actually tells you how to do it.
-
-<pre><code>
-$ git status
-# On branch master
-# Changed but not updated:
-#   (use "git add <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-#	modified:   alice.txt
-#
-$ git checkout -- alice.txt
-</code></pre>
-
 
 You have now un-done your changes.
+
+
+And then commit our file to the repository
+
+<pre>
+
+Commit your changes with the message "Added Lorem Ipsum to alice.txt as requested" (Ask for help if needed)
+
+</pre>
+
+Did you manage to commit your changes? Try using @git log@ or @git show@ to verify that your last commit was "Added Lorem Ipsum to alice.txt as requested".
+
+<pre>
+
+Verify that your last commit in the git log
+
+</pre>
+
+
+
 
 
 h2. Branching and merging
