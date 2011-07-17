@@ -201,7 +201,7 @@ $ git branch
 
 The @*@ should indicate the current branch you are on, which is @master@.
 
-If you wish to start another branch, use @git branch (new-branch)@ :
+If you wish to start another branch, use @git branch (new-branch-name)@ :
 
 <pre><code>
 $ git branch exp1
@@ -218,7 +218,7 @@ $ git checkout exp1
 Switched to branch 'exp1'
 </code></pre>
 
-@git checkout (branch)@ is used to switch branches. 
+@git checkout (branch-name)@ is used to switch branches. 
 
 
 Let's perform some commits now,
