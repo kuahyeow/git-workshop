@@ -266,8 +266,7 @@ $ ls
 README.textile	alice.txt	bob.txt		gamow.txt
 </code></pre>
 
-As you can see the new file you created in the other branch has disappeared. Not to worry, they are safely tucked away, 
-and will re-appear when you switch back to that branch.
+As you can see the new file you created in the other branch has disappeared. Not to worry, it is safely tucked away, and will re-appear when you switch back to that branch.
 
 <pre>
 
