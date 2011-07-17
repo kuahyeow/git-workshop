@@ -19,7 +19,7 @@ $ git config --global core.editor emacs
 </code></pre>
 
 
-h2. Start
+h2. Starting your journey
 
 
 First, clone this repository:
@@ -49,7 +49,7 @@ branches  config  description  HEAD  hooks  info  objects  refs
 </code></pre>
 
 
-h2. Basics
+h2. Adding new files
 
 Now, let's try adding some files into the project. Create a couple of files. For example, I
 create two files named @bob.txt@ and @alice.txt@.
@@ -79,8 +79,39 @@ $ git commit -m "I am adding two new files"
  create mode 100644 bob.txt
 </code></pre>
 
+h2. Let's see what just happened
 
-h2. Basics (II)
+We should now have a new commit. To see all the commits so far, use @git log@
+
+<pre><code>
+$ git log
+</code></pre>
+
+The log should show all commits listed from most recent first to least recent. You would see various information like the name of the author, the date it was commited, a commit SHA number, and the message for the commit. 
+
+You should also see your most recent commit, where you added the two new files in the previous section. However git log does not show the files involved in each commit. To view more information about a commit, use @git show@.
+
+<pre><code>
+$ git show
+
+commit 5a1fad96c8584b2c194c229de7e112e4c84e5089
+Author: kuahyeow <kuahyeow@gmail.com>
+Date:   Sun Jul 17 19:13:42 2011 +1200
+
+    I am adding two new files
+
+diff --git a/alice.txt b/alice.txt
+new file mode 100644
+index 0000000..e69de29
+diff --git a/bob.txt b/bob.txt
+new file mode 100644
+index 0000000..e69de29
+</code></pre>
+
+
+h2. Adding more files and changes
+
+
 
 A very useful command is @git diff@. This is very useful to see exactly what changes you have done. 
 
