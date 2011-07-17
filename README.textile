@@ -60,34 +60,14 @@ In your working directory, create two files named alice.txt and bob.txt
 
 </pre>
 
-We use @git status@ to determine the status of any changes, whether they are untracked, in the staging area, or committed.
-
-<pre><code>
-$ git status -s
-?? alice.txt
-?? bob.txt
-</code></pre>
-
 In Git, you add content to the 'staging area' first by using @git add@ and then 
 finalizing the process to record it into the git index by using @git commit@
-
-The @??@ means that the files are not indexed by Git yet, or 'untracked'.
 
 Now to add the files to the staging area
 
 <pre><code>
 $ git add alice.txt bob.txt
 </code></pre>
-
-Try running @git status -s@ again to see what's changed.
-
-<pre><code>
-$ git status -s
-A  alice.txt
-A  bob.txt
-</code></pre>
-
-The @A@ signifies that the files are now Added to the staging area.
 
 You are now ready to commit. The @-m@ flag allows you to enter a message to go with the commit at the same time. 
 
@@ -99,16 +79,6 @@ $ git commit -m "I am adding two new files"
  create mode 100644 bob.txt
 </code></pre>
 
-
-On a final note, if you try @git status@ now you will see the following:
-
-<pre><code>
-$ git status
-On branch master
-nothing to commit (working directory clean) 
-</code></pre>
-
-You should always aim for this state.
 
 h2. Basics (II)
 
