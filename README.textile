@@ -386,7 +386,7 @@ h3. References and Further reading
 
 I throughly recommend these resources to continue your Git practice:
 
-* <a href="http://try.github.com"http://try.github.com</a> Another beginners tutorial for git
+* <a href="http://try.github.com">http://try.github.com</a> Another beginners tutorial for git
 * <a href="http://progit.org">http://progit.org</a> (buy the book at http://tinyurl.com/amazonprogit)
 * <a href="http://gitref.org">http://gitref.org</a>
 * <a href="http://www.kernel.org/pub/software/scm/git/docs/everyday.html">http://www.kernel.org/pub/software/scm/git/docs/everyday.html</a>
