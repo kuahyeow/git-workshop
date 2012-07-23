@@ -25,7 +25,7 @@ h2. Starting your journey
 First, clone this repository:
 
 <pre><code>
-$ git clone http://github.com/kuahyeow/git-workshop.git
+$ git clone https://github.com/kuahyeow/git-workshop.git
 Initialized empty Git repository in /home/kuahyeow/git-workshop/.git/
 remote: Counting objects: 17, done.
 remote: Compressing objects: 100% (11/11), done.
@@ -386,6 +386,7 @@ h3. References and Further reading
 
 I throughly recommend these resources to continue your Git practice:
 
+* <a href="http://try.github.com"http://try.github.com</a> Another beginners tutorial for git
 * <a href="http://progit.org">http://progit.org</a> (buy the book at http://tinyurl.com/amazonprogit)
 * <a href="http://gitref.org">http://gitref.org</a>
 * <a href="http://www.kernel.org/pub/software/scm/git/docs/everyday.html">http://www.kernel.org/pub/software/scm/git/docs/everyday.html</a>
