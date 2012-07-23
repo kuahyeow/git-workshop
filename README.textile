@@ -32,12 +32,6 @@ First, clone this repository:
 
 <pre><code>
 $ git clone https://github.com/kuahyeow/git-workshop.git
-Initialized empty Git repository in /home/kuahyeow/git-workshop/.git/
-remote: Counting objects: 17, done.
-remote: Compressing objects: 100% (11/11), done.
-remote: Total 17 (delta 4), reused 0 (delta 0)
-Receiving objects: 100% (17/17), done.
-Resolving deltas: 100% (4/4), done.
 </code></pre>
 
 Once you have cloned your repository, you should now see a directory called @git-workshop@. This is your @working directory@
@@ -47,15 +41,23 @@ $ cd git-workshop
 $ ls
 </code></pre>
 
+[?] Stuck? ask for help from the workshop staff
+
+
 For the curious, you should also see the @.git@ subdirectory. This is where all your repository's data and history is kept.
 
 <pre><code>
 $ ls -a .git
+<code></pre>
+
+You will see :
+
+<pre>
 branches  config  description  HEAD  hooks  info  objects  refs
-</code></pre>
+</pre>
 
 
-h2. Adding new files
+h2. The staging area
 
 Now, let's try adding some files into the project. Create a couple of files. For example, I create two files named @bob.txt@ and @alice.txt@.
 
@@ -75,15 +77,16 @@ Let's add the files to the staging area
 $ git add alice.txt bob.txt
 </code></pre>
 
+h2. Committing
+
 You are now ready to commit. The @-m@ flag allows you to enter a message to go with the commit at the same time. 
 
 <pre><code>
 $ git commit -m "I am adding two new files"
-[master 4e7c6cf] I am adding two new files
- 0 files changed, 0 insertions(+), 0 deletions(-)
- create mode 100644 alice.txt
- create mode 100644 bob.txt
 </code></pre>
+
+[?] Stuck? ask for help from the workshop staff
+
 
 h2. Let's see what just happened
 
@@ -99,7 +102,11 @@ You should also see your most recent commit, where you added the two new files i
 
 <pre><code>
 $ git show
+</code></pre>
 
+You should see something similar to:
+
+<pre>
 commit 5a1fad96c8584b2c194c229de7e112e4c84e5089
 Author: kuahyeow <kuahyeow@gmail.com>
 Date:   Sun Jul 17 19:13:42 2011 +1200
@@ -112,55 +119,52 @@ index 0000000..e69de29
 diff --git a/bob.txt b/bob.txt
 new file mode 100644
 index 0000000..e69de29
-</code></pre>
+</pre>
+
+[?] Stuck? ask for help from the workshop staff
 
 
-h2. Adding more changes and backing out
+h2. A necessary digression
 
 In this section, we are going to add more changes, and try to recover from mistakes.
 
 Be forewarned, this next step is going to be hard. We will need to add some content to alice.txt. 
 
-<pre>
-Open alice.txt and type in something, anything. 
+Open @alice.txt@ and type in your favourite line from a song, or:
 
 e.g. Lorem ipsum Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium
 
-Then save.
+Then *save* the file
 
-</pre>
-
-So we have updated @alice.txt@ and we wish to commit it to our @repository@.
+So now, we have updated @alice.txt@ and we wish to commit it to our @repository@.
 
 What did we change? A very useful command is @git diff@. This is very useful to see exactly what changes you have done. 
 
 <pre><code>
 $ git diff
+</code></pre>
 
+You should see something like the following:
+<pre>
 diff --git a/alice.txt b/alice.txt
 index e69de29..2aedcab 100644
 --- a/alice.txt
 +++ b/alice.txt
 @@ -0,0 +1 @@
 +Lorem ipsum Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium
-
-</code></pre>
-
-
-Now let's add our modified file to the staging area
-
-<pre>
-
-Add <b>alice.txt</b> to the staging area. (Ask for help if you are stumped)
-
-</pre> 
-
-<pre>
-
-Now, check the <b>status</b> of <b>alice.txt</b>. Is it in the staging area now?
-
 </pre>
 
+[?] Stuck? ask for help from the workshop staff
+
+h2. Staging area again
+
+Now let's add our modified file, @alice.txt@ to the staging area. Do you remember how ?
+
+Next, check the @status@ of @alice.txt@. Is it in the staging area now?
+
+[?] Stuck? ask for help from the workshop staff
+
+h2. Undoing
 
 Let's say we did not like putting Lorem ipsum into @alice.txt@. One advantage of a staging area is to enable us to back out before we commit - which is a bit harder to back out of. Remembering the mail analogy - it's easier to take mail out of the cardboard box before you seal it than after.
 
@@ -168,30 +172,32 @@ Here's how to back out of the staging area :
 
 <pre><code>
 $ git reset HEAD alice.txt
-
-Unstaged changes after reset:
-M	alice.txt
-
 </code></pre>
-
-Your staging area should now be empty. What's happened to the Lorem Ipsum changes? It's still there. We are now back to the state just before we added this file to staging area.
 
 <pre>
-
-What do we call this state?
-
+Unstaged changes after reset:
+M	alice.txt
 </pre>
 
-To undo your changes entirely, we use @git checkout@, like so:
+Compare the @git status@ now to the git status from the previous section. How does it differ?
+
+[?] Stuck? ask for help from the workshop staff
+
+Your staging area should now be empty. What's happened to the Lorem Ipsum changes? It's still there. We are now back to the state just before we added this file to staging area. Going back to the mail analogy, we just took our letter out of the box.
+
+h2. Undoing II
+
+Sometimes we did not like what we have done and we wish to go back to the last _recorded_ state. In this case, we wish to go back to the state just before we added the Lorrem ipsum text to @alice.txt@.
+
+To accomplish this, we use @git checkout@, like so:
 
 <pre><code>
-
 $ git checkout alice.txt
-
 </code></pre>
 
-You have now un-done your changes. Your file is now empty
+You have now un-done your changes. Your file is now empty.
 
+[?] Stuck? ask for help from the workshop staff
 
 
 h2. Branching
@@ -202,16 +208,19 @@ Creating a branch in Git is easy. The @git branch@ command, when used by itself,
 
 <pre><code>
 $ git branch
-
-* master
 </code></pre>
 
 The @*@ should indicate the current branch you are on, which is @master@.
 
-If you wish to start another branch, use @git branch (new-branch-name)@ :
+If you wish to start another branch, use @git checkout -b (new-branch-name)@ :
 
 <pre><code>
-$ git branch exp1
+$ git checkout -b exp1
+</code></pre>
+
+Try git branch again to check which branch you are currently on:
+
+<pre><code>
 $ git branch
   exp1
 * master
@@ -221,11 +230,9 @@ The new branch is now created. Now let's work in that branch. To switch to the n
 
 <pre><code>
 $ git checkout exp1
-
-Switched to branch 'exp1'
 </code></pre>
 
-@git checkout (branch-name)@ is used to switch branches. 
+@git checkout (branch-name)@ is used to switch branches.
 
 
 Let's perform some commits now,
@@ -234,35 +241,25 @@ Let's perform some commits now,
 $ echo 'some content' > test.txt
 $ git add test.txt
 $ git commit -m "Added experimental txt"
-[exp1 1520634] Added experimental txt
- 1 files changed, 1 insertions(+), 0 deletions(-)
- create mode 100644 test.txt
 </code></pre>
 
 Now, let's compare them to the master branch. Use @git diff@
 
 <pre><code>
 $ git diff master
-
-diff --git a/test.txt b/test.txt
-new file mode 100644
-index 0000000..2ef267e
---- /dev/null
-+++ b/test.txt
-@@ -0,0 +1 @@
-+some content
 </pre></code>
 
 Basically what the above output says is that @test.txt@ is present on the @exp1@ branch, but is absent on the @master@ branch.
 
+[?] Stuck? ask for help from the workshop staff
+
+
+h2. Now you see me, now you don't
 
 Git is good enough to handle your files when you switch between branches. Switch back to the @master@ branch
 
-<pre>
+Try switching back to the master branch (Hint: It's the same command we used to switch to the exp1 branch above)
 
-Switch back to the master branch (Hint: It's the same command we used to switch the the exp1 branch above)
-
-</pre>
 
 Now, where's our @test.txt@ file ?
 
@@ -273,75 +270,71 @@ README.textile	alice.txt	bob.txt		gamow.txt
 
 As you can see the new file you created in the other branch has disappeared. Not to worry, it is safely tucked away, and will re-appear when you switch back to that branch.
 
-<pre>
+Now, switch back to the exp1 branch, and check that the @test.txt@ is now present.
 
-Switch back to the exp1 branch, and check that the test.txt is now present.
-
-</pre>
+[?] Stuck? ask for help from the workshop staff
 
 
 h2. Merging
 
 We now try out merging. Eventually you will want to merge two branches together after the conclusion of work. 
-@git merge@ allows you to do that. 
+@git merge@ allows you to do that.
 
-First, make sure you are on the @master@ branch.
+Git merging works by first switching the branch you want to _into_, and then running the command to merge the other branch in.
 
-<pre>
+We now want to merge our @exp1@ branch into @master@. First, switch to the @master@ branch.
 
-Switch to the master branch if you haven't already
+<pre><code>
+git checkout master
+</code></pre>
 
-</pre>
-
-To merge the @exp1@ branch into @master@
+Next, we merge the @exp1@ branch into @master@ :
 
 <pre><code>
 $ git merge exp1
+</code></pre>
+
+Do you see the following output ?
+
+<pre>
 Merge made by recursive.
  test.txt |    1 +
  1 files changed, 1 insertions(+), 0 deletions(-)
  create mode 100644 test.txt
-</code></pre>
+</pre>
 
-You always specify the branch you want to merge from, and you have to be in the branch you want merge into.
+You have to be in the branch you want merge _into_ and then you always specify the branch you want to merge.
 
 At this point, you can also try out @gitk@ to visualize the changes and how the two branches have merged
 
-Git is pretty good at merging automagically, even when the same file is edited. There are however, some situations where the same line of code is edited there is no way a computer can figure out how to merge. 
-This will trigger a conflict which you will have to fix. 
-
 h2. Merge Conflicts
+
+Git is pretty good at merging automagically, even when the same file is edited. There are however, some situations where the same line of code is edited there is no way a computer can figure out how to merge. 
+This will trigger a conflict which you will have to fix.
 
 We now practise fixing merge conflicts. Recall that conflicts are caused by merges which affect the same block of code.
 
 Here's a branch I prepared earlier. The branch is called @alpher@. Run the code below to set it up (don't worry if you can't understand it)
 <pre><code>
 $ git checkout alpher
-
-Branch alpher set up to track remote branch alpher from origin.
-Switched to a new branch 'alpher'
 </code></pre>
 
 You should now have a new branch called @alpher@. Try merging that branch into @master@ now and fix the ensuing conflict.
 
-<pre>
+[?] Stuck? ask for help from the workshop staff
 
-Merge the alpher branch into master (as you did when you merged exp1 into master) (Ask for help if stumped)
+h2. Fixing a conflict
 
-</pre>
-
-
-You should see a @conflict@ with the @gamow.txt@ file. This means that the same line of text was edited and committed on both the master branch and the alpher branch. The output below basically tells you the current situation
+You should see a @conflict@ with the @gamow.txt@ file. This means that the same line of text was edited and committed on both the master branch and the alpher branch. The output below basically tells you the current situation :
 
 <pre><code>
- 
 Auto-merging gamow.txt
 CONFLICT (content): Merge conflict in gamow.txt
 Automatic merge failed; fix conflicts and then commit the result.
 
 </code></pre>
 
-If you open the @gamow.txt@ file, you will see something similar as below: 
+If you open the @gamow.txt@ file, you will see something similar as below:
 
 <pre>
 
@@ -358,20 +351,17 @@ Stellar nucleosynthesis is the collective term for the nuclear reactions taking 
 Git uses pretty much standard conflict resolution markers. The top part of the block, which is everything between @<<<<<< HEAD@ and @======@ is what was in your current branch.
 The bottom half is the version that is present from the @alpher@ branch. To resolve the conflict, you either choose one side or merge them as you see fit.
 
-For example, I might decide to choose the version from the @alpher@ branch. 
+For example, I might decide to choose the version from the @alpher@ branch.
 
-<pre>
+Now, try to *fix the merge conflict*. Pick the text that you think is better (Ask for help if stumped)
 
-Fix the merge conflict. Pick the text that you think is better (Ask for help if stumped)
+Once I have done that, I can then mark the conflict as fixed by using @git add@ and @git commit@.
 
-</pre>
-
-Once I have done that, I can then mark the conflict as fixed by using @git add@ and @git commit@. 
+[?] Stuck? ask for help from the workshop staff
 
 <pre><code>
 $ git add gamow.txt
 $ git commit -m "Fixed conflict"
-[master f03b09c] Fixed conflict
 </code></pre>
 
 Congratulations. You have fixed the conflict. All is good in the world.
@@ -437,7 +427,7 @@ h3. References and Further reading
 I throughly recommend these resources to continue your Git practice:
 
 * <a href="http://try.github.com">http://try.github.com</a> Another beginners tutorial for git
-* <a href="http://progit.org">http://progit.org</a> (buy the book at http://tinyurl.com/amazonprogit)
+* <a href="http://git-scm.com">http://git-scm.com</a> Official website, with very useful help, book and videos
 * <a href="http://gitref.org">http://gitref.org</a>
 * <a href="http://www.kernel.org/pub/software/scm/git/docs/everyday.html">http://www.kernel.org/pub/software/scm/git/docs/everyday.html</a>
 
