@@ -41,7 +41,7 @@ $ cd git-workshop
 $ ls
 </pre>
 
-!https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png! Stuck? ask for help from the workshop staff
+!https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png! Stuck? Ask for help from the workshop staff
 
 
 For the curious, you should also see the @.git@ subdirectory. This is where all your repository's data and history is kept.
@@ -86,7 +86,7 @@ You are now ready to commit. The @-m@ flag allows you to enter a message to go w
 $ git commit -m "I am adding two new files"
 </pre>
 
-!https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png! Stuck? ask for help from the workshop staff
+!https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png! Stuck? Ask for help from the workshop staff
 
 
 h2. Let's see what just happened
@@ -122,7 +122,7 @@ new file mode 100644
 index 0000000..e69de29
 </pre>
 
-!https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png! Stuck? ask for help from the workshop staff
+!https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png! Stuck? Ask for help from the workshop staff
 
 
 h2. A necessary digression
@@ -155,7 +155,7 @@ index e69de29..2aedcab 100644
 +Lorem ipsum Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium
 </code></pre>
 
-!https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png! Stuck? ask for help from the workshop staff
+!https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png! Stuck? Ask for help from the workshop staff
 
 h2. Staging area again
 
@@ -163,7 +163,7 @@ Now let's add our modified file, @alice.txt@ to the staging area. Do you remembe
 
 Next, check the @status@ of @alice.txt@. Is it in the staging area now?
 
-!https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png! Stuck? ask for help from the workshop staff
+!https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png! Stuck? Ask for help from the workshop staff
 
 h2. Undoing
 
@@ -182,7 +182,7 @@ M	alice.txt
 
 Compare the @git status@ now to the git status from the previous section. How does it differ?
 
-!https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png! Stuck? ask for help from the workshop staff
+!https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png! Stuck? Ask for help from the workshop staff
 
 Your staging area should now be empty. What's happened to the Lorem Ipsum changes? It's still there. We are now back to the state just before we added this file to staging area. Going back to the mail analogy, we just took our letter out of the box.
 
@@ -198,7 +198,7 @@ $ git checkout alice.txt
 
 You have now un-done your changes. Your file is now empty.
 
-!https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png! Stuck? ask for help from the workshop staff
+!https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png! Stuck? Ask for help from the workshop staff
 
 
 h2. Branching
@@ -252,7 +252,7 @@ $ git diff master
 
 Basically what the above output says is that @test.txt@ is present on the @exp1@ branch, but is absent on the @master@ branch.
 
-!https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png! Stuck? ask for help from the workshop staff
+!https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png! Stuck? Ask for help from the workshop staff
 
 
 h2. Now you see me, now you don't
@@ -273,7 +273,7 @@ As you can see the new file you created in the other branch has disappeared. Not
 
 Now, switch back to the exp1 branch, and check that the @test.txt@ is now present.
 
-!https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png! Stuck? ask for help from the workshop staff
+!https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png! Stuck? Ask for help from the workshop staff
 
 
 h2. Merging
@@ -323,7 +323,7 @@ $ git checkout alpher
 
 You should now have a new branch called @alpher@. Try merging that branch into @master@ now and fix the ensuing conflict.
 
-!https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png! Stuck? ask for help from the workshop staff
+!https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png! Stuck? Ask for help from the workshop staff
 
 h2. Fixing a conflict
 
@@ -357,7 +357,7 @@ Now, try to *fix the merge conflict*. Pick the text that you think is better (As
 
 Once I have done that, I can then mark the conflict as fixed by using @git add@ and @git commit@.
 
-!https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png! Stuck? ask for help from the workshop staff
+!https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png! Stuck? Ask for help from the workshop staff
 
 <pre>
 $ git add gamow.txt
