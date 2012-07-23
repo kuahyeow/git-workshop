@@ -1,3 +1,9 @@
+h1. What is Git ?
+
+Git is a _distributed_ *version control* system [1]
+
+[1] <a href="http://git-scm.com/about">http://git-scm.com/about</a>
+
 h2. Setup
 
 Some house-cleaning here. We assume of course you have Git installed, (hopefully >= 1.7.0).
@@ -370,6 +376,7 @@ $ git commit -m "Fixed conflict"
 
 Congratulations. You have fixed the conflict. All is good in the world.
 
+
 h2. Fin
 
 You have learnt :
@@ -381,6 +388,49 @@ You have learnt :
 # Undoing changes
 # Branching and merging
 # Fixing conflicts
+
+
+h1. Part II
+
+h2. GitHub
+
+But, wait. There's more. What about this distributed sharing thing with Git ?
+
+To be able to share, we'll need a server to host our git repositiories. GitHub (<a href="https://github.com/">github.com</a>) is probably the easiest place to begin with.
+
+h2. Login or sign up with GitHub
+
+Go <a href="https://github.com/signup">sign up for an account</a> at GitHub; Or login into your GitHub account if you had previously signed up.
+
+Hint: You may need to setup git cache your GitHub password - see <a href="https://help.github.com/articles/set-up-git">https://help.github.com/articles/set-up-git</a>
+
+Then come back here, we'll wait.
+
+h2. Create your first GitHub repository
+
+A repository (repo) is a place where you would store your code. You were practising on your very own repo just now in Part 1!
+
+The following <a href="https://help.github.com/articles/create-a-repo"> tutorial</a> will show you how to create a GitHub repo - which you can then share with others
+
+Then come back here, we'll wait.
+
+h2. Fork a repo
+
+Go to <a href="https://help.github.com/articles/fork-a-repo">this tutorial<a>
+
+Then come back here, we'll wait.
+
+h2. Let's collaborate !
+
+...
+
+h2. Fin
+
+You have learnt:
+
+# Forking a repo at GitHub
+# Git push
+# Git pull
 
 h3. References and Further reading
 
