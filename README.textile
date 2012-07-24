@@ -137,8 +137,6 @@ e.g. Lorem ipsum Sed ut perspiciatis, unde omnis iste natus error sit voluptatem
 
 Then *save* the file
 
-So now, we have updated @alice.txt@ and we wish to commit it to our @repository@.
-
 What did we change? A very useful command is @git diff@. This is very useful to see exactly what changes you have done. 
 
 <pre>
