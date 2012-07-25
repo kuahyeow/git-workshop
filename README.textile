@@ -410,7 +410,7 @@ Then come back here, we'll wait.
 
 h2. Let's collaborate !
 
-...
+In which you will be collaborating with your team-mates using GitHub...
 
 h2. Fin
 
