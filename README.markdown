@@ -444,15 +444,13 @@ Then come back here, we’ll wait.
 Fork a repo
 -----------
 
-Go to <a href="https://help.github.com/articles/fork-a-repo">this
-tutorial<a>
-
+Go to [this tutorial](https://help.github.com/articles/fork-a-repo)
 Then come back here, we’ll wait.
 
 Let’s collaborate !
 -------------------
 
-In which you will be collaborating with your team-mates using GitHub…
+Check out the pull_request branch on this repository for further instructions!
 
 Fin
 ---
