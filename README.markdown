@@ -9,10 +9,10 @@ to submit their favorite GIF to one central location: here!
 
 You'll need to be able to do the following:
 
-1) Make changes to files in git and commit them to a branch
-2) Push your changes up to your repository on Github
-3) Make a pull request on Github
-4) Merge a pull request on Github
+1. Make changes to files in git and commit them to a branch
+2. Push your changes up to your repository on Github
+3. Make a pull request on Github
+4. Merge a pull request on Github
 
 Lets point you to some more resources on each of the steps.
 
