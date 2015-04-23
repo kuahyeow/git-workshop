@@ -313,19 +313,19 @@ This will trigger a conflict which you will have to fix.
 
 We now practise fixing merge conflicts. Recall that conflicts are caused by merges which affect the same block of code.
 
-Here's a branch I prepared earlier. The branch is called @alpher@. Run the code below to set it up (don't worry if you can't understand it)
+Here's a branch I prepared earlier. The branch is called @pull_request@. Run the code below to set it up (don't worry if you can't understand it)
 
 <pre>
-$ git checkout alpher
+$ git checkout pull_request
 </pre>
 
-You should now have a new branch called @alpher@. Try merging that branch into @master@ now and fix the ensuing conflict.
+You should now have a new branch called @pull_request@. Try merging that branch into @master@ now and fix the ensuing conflict.
 
 !https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png! Stuck? Ask for help from the workshop staff
 
 h2. Fixing a conflict
 
-You should see a @conflict@ with the @gamow.txt@ file. This means that the same line of text was edited and committed on both the master branch and the alpher branch. The output below basically tells you the current situation :
+You should see a @conflict@ with the @gamow.txt@ file. This means that the same line of text was edited and committed on both the master branch and the pull_request branch. The output below basically tells you the current situation :
 
 <pre>
 Auto-merging gamow.txt
@@ -343,13 +343,13 @@ It was eventually recognized that most of the heavy elements observed in the pre
 
 http://en.wikipedia.org/wiki/Stellar_nucleosynthesis
 Stellar nucleosynthesis is the collective term for the nuclear reactions taking place in stars to build the nuclei of the elements heavier than hydrogen. Some small quantity of these reactions also occur on the stellar surface under various circumstances. For the creation of elements during the explosion of a star, the term supernova nucleosynthesis is used.
->>>>>>> alpher
+>>>>>>> pull_request
 </pre>
 
 Git uses pretty much standard conflict resolution markers. The top part of the block, which is everything between @<<<<<< HEAD@ and @======@ is what was in your current branch.
-The bottom half is the version that is present from the @alpher@ branch. To resolve the conflict, you either choose one side or merge them as you see fit.
+The bottom half is the version that is present from the @pull_request@ branch. To resolve the conflict, you either choose one side or merge them as you see fit.
 
-For example, I might decide to choose the version from the @alpher@ branch.
+For example, I might decide to choose the version from the @pull_request@ branch.
 
 Now, try to *fix the merge conflict*. Pick the text that you think is better (Ask for help if stumped)
 
