@@ -5,11 +5,17 @@ Git is a *distributed* **version control** system [1]
 
 [1] <a href="http://git-scm.com/about">http://git-scm.com/about</a>
 
-Setup
------
+Getting Git
+-----------
 
 Some house-cleaning here. We assume of course you have Git installed,
 (hopefully \>= 1.7.0).
+
+If you don't you can install it from downloads on the git homepage or you can
+install ![Github's git GUI](https://help.github.com/articles/set-up-git/).
+
+Setup
+-----
 
 First thing to do is to setup your identity. This identifies you to
 other people who download the project.
@@ -30,7 +36,7 @@ First, clone this repository:
 
 You may want to fork (create your own copy of) the project on github and
 clone from your own repo. You can find the fork button at the top right of
-the screen on a github repository.
+the screen on a github repository, or more help about doing that ![here](https://help.github.com/articles/fork-a-repo/).
 
 Once you have cloned your repository, you should now see a directory
 called `git-workshop`. This is your `working directory`
