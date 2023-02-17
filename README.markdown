@@ -11,14 +11,26 @@ Getting Git
 Some house-cleaning here. We assume of course you have Git installed,
 (hopefully \>= 1.7.0).
 
-If you don't you can install it from downloads on the git homepage or you can
+If you don't you can install it from downloads on the [git homepage](https://git-scm.com/) or you can
 install [Github's git GUI](https://help.github.com/articles/set-up-git/).
+
+Getting VSCode  
+-----------
+
+Install VSCode from [the site](https://code.visualstudio.com/​). For this workshop we'll require one Plugin, [GitHub Pull Requests and Issues](https://open-vsx.org/vscode/item?itemName=GitHub.vscode-pull-request-github). A few other handy plugins are:
+
+- [Git Blame](https://marketplace.visualstudio.com/items?itemName=waderyan.gitblame)
+- [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
+- [TerosHDL](https://marketplace.visualstudio.com/items?itemName=teros-technology.teroshdl)
+- Many, Many more, Have a look under the extensions tab in VSCode
+
+A great resource for shortcuts is [the shortcut reference](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf)
 
 Setup
 -----
 
 First thing to do is to setup your identity. This identifies you to
-other people who download the project.
+other people who download the project. you can open a terminal in VSCode with Ctrl + Shift + ` 
 
     $ git config --global user.name "Your Name"
     $ git config --global user.email your.email@example.com
