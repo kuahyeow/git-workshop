@@ -13,13 +13,11 @@ other people who download the project.
 
 ## Starting your journey
 
-First, clone this repository:
+First, fork (create your own copy of) and clone this repository:  
+You can find the fork button at the top right of
+the screen on a github repository, or more help about doing that [here](https://help.github.com/articles/fork-a-repo/).
 
     $ git clone git@github.com:charmcity-code/git-workshop.git
-
-You may want to fork (create your own copy of) the project on github and
-clone from your own repo. You can find the fork button at the top right of
-the screen on a github repository, or more help about doing that [here](https://help.github.com/articles/fork-a-repo/).
 
 Once you have cloned your repository, you should now see a directory
 called `git-workshop`. This is your `working directory`
@@ -144,4 +142,4 @@ practising on your very own repo just now in Part 1!
 
 The following <a href="https://help.github.com/articles/create-a-repo">
 tutorial</a> will show you how to create a GitHub repo - which you can
-then share with others
+then share with others.
