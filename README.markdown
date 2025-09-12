@@ -296,8 +296,8 @@ We now try out merging. Eventually you will want to merge two branches
 together after the conclusion of work.\
 `git merge` allows you to do that.
 
-Git merging works by first switching the branch you want to *into*, and
-then running the command to merge the other branch in.
+Git merging works by first switching to the branch you want to merge
+*into*, and then running the command to merge the other branch in.
 
 We now want to merge our `exp1` branch into `master`. First, switch to
 the `master` branch.
