@@ -1,0 +1,17 @@
+{
+  "name": "github-actions-project",
+  "version": "1.0.0",
+  "description": "A simple project to demonstrate GitHub Actions",
+  "main": "app.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "echo \"Running tests...\" && exit 0",
+    "build": "echo \"Building application...\" && exit 0",
+    "docs:build": "echo \"Building documentation...\" && exit 0"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.0.0"
+  }
+}
